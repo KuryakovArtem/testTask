@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <title>Operations</title>
+</head>
+<header th:insert="blocks/header :: header"></header>
+
+<body>
+<form method="post" style="margin: 50px">
+    <legend th:text="${result}"/>
+    <input name="responseString" pattern="^(sum|max|min|mean)(,[0-9]+)*$" placeholder="opr,id,id,id..." class="form-control form-control-lg mt-5" type="text">
+    <p>
+        <input type="submit" class="btn btn-primary mt-1 mb-2" />
+    </p>
+
+</form>
+</body>
+</html>
